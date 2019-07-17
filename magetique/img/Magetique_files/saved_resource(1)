@@ -1,0 +1,24 @@
+.modal-popup .modal-inner-wrap {
+    pointer-events: auto;
+}
+.modal-popup.newsletter-popup .modal-inner-wrap {
+    width: 810px;
+}
+.modal-popup.newsletter-popup .buttons-container button.subscribe {
+    background-color: ;
+    border-color: ;
+}
+.modal-popup.newsletter-popup .buttons-container button.subscribe:hover {
+    background-color: ;
+    border-color: ;
+}
+.modal-popup .modal-social {
+    font-size: 1.75em;
+}
+.modal-popup .modal-social .fa {
+    padding: 7px 5px;
+}
+.modal-popup .modal-social :link,
+.modal-popup .modal-social :hover {
+    text-decoration: none;
+}

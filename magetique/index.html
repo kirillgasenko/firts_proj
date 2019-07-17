@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Magetique</title>
+    
+    <!-- css -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/grid.css">
+    
+    <!--Slick-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="css/style_diplom.css">
+<!--    slider pro-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slider-pro/1.5.0/css/slider-pro.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+   
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script src="js/firebase_init.js"></script>
+    <script src="js/products.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shopify-cartjs/0.4.1/cart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slider-pro/1.5.0/js/jquery.sliderPro.js"></script>
+    <script src="js/scripts.js"></script>
+    
+    
+    
+</head>
+<body class="lock">
+   <div id="page-preloader" class="preloader">
+        <div class="loader"></div>
+    </div>
+    <div id="global_message" class="global-message"></div>
+    <div class="wrapper">
+    <header>
+        <div class="above_bar">
+            <div class="container">
+              <div class="above_flex">
+                   <!-- span header -->
+                    <span class="first_span">Default welcome msg!</span>
+                    <!-- 4 варинта для входа -->
+                    <div class="enter">
+                        <button class="person" id="menu_top"><ion-icon name="person"></ion-icon></button>
+                        <ul class="list_top" id="menu_top_wrap">
+                            <li class="account"><a href="profile.html" class="other">My Account</a></li>
+                            <li class="account"><a href="profile.html" class="other">My Wish list</a></li>
+                            <li class="account"><a href="auth.html" class="other">Sign In</a></li>
+                            <li class="account"><a href="register.html" class="other">Create an Account</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fix_menu">
+             <button id="menu-new" class="border_left_light"><ion-icon name="menu"></ion-icon></button>
+             <button class="border_left_light" id="search_filed_button"><ion-icon name="search" ></ion-icon></button>
+             <button class="person1" id="menu_top" class="border_left_light"><ion-icon name="person"></ion-icon></button>
+             <button class="undef" class="cart_menu_header_top"><ion-icon name="cart" ></ion-icon></button>
+        </div>
+<!--         <ul class="menu_top_wrap">
+                 <li class="flex_li_menu"><a href="#">INTERIOT</a><ion-icon name="arrow-dropdown" class="arrow_drop"></ion-icon></li>
+                 <li class="flex_li_menu"><a href="#">EXTERIOT</a><ion-icon name="arrow-dropdown" class="arrow_drop"></ion-icon></li>
+                 <li class="flex_li_menu"><a href="#">LIGHTING</a><ion-icon name="arrow-dropdown" class="arrow_drop"></ion-icon></li>
+                 <li class="flex_li_menu"><a href="#">REPAIR PARTS</a><ion-icon name="arrow-dropdown" class="arrow_drop"></ion-icon></li>
+                 <li class="flex_li_menu"><a href="#">BODY PARTS</a><ion-icon name="arrow-dropdown" class="arrow_drop"></ion-icon></li>
+                 <li><a href="#">BLOG</a></li>
+             </ul> -->
+        <div class="accordeon menu_top_wrap" id="accordeon">
+           <div class="accordeon-item" data-accordeon="4">
+                <li class="accordeon-item__title  flex_li_menu"><a href="#">INTERIOT</a><ion-icon name="arrow-dropdown" class="arrow_drop"></ion-icon></li>
+                <a href="#" class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Tailored car mats</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Floor & Cargo Mats</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Car Seat Covers</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Steering Wheel Covers</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Storage & Organizator</span></a>
+           </div>
+           <div class="accordeon-item" data-accordeon="5">
+               <li class="accordeon-item__title flex_li_menu"><a href="#">EXTERIOT</a><ion-icon name="arrow-dropdown" class="arrow_drop"></ion-icon></li>
+               <a href="#"  class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Tow Bars</span></a>
+               <a href="#"  class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Tow Bars Electric Kit</span></a>
+               <a href="#"  class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Car Covers & Car Protection</span></a>
+               <a href="#"  class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Cargo Management</span></a>
+               <a href="#"  class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Exterior Car Decoration</span></a>
+           </div>
+           <div class="accordeon-item" data-accordeon="6">
+                <li class="accordeon-item__title flex_li_menu"><a href="#">LIGHTING</a><ion-icon name="arrow-dropdown" class="arrow_drop"></ion-icon></li>
+                <a href="#" class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Headlight</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Tailights</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Indicator</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Cambination Tallight</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Brake light</span></a>
+           </div>
+           <div class="accordeon-item" data-accordeon="7">
+               <li class="accordeon-item__title flex_li_menu"><a href="#">REPAIR PARTS</a><ion-icon name="arrow-dropdown" class="arrow_drop"></ion-icon></li>
+                <h4 class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">ENGINE PARTS</span></h4>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Engine Assembly</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Engine Block</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Cylinder Head</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Turbo & Superchanger</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Valve Covers</span></a>
+                <h4 class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">SUSPENSION PARTS</span></h4>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Shocks & Struts</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Air Suspension</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Coil Springs</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Leaf Springs</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Torsion Bars</span></a>
+                <h4 class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">BRAKE PARTS</span></h4>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Brake Kits</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Rotors</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Brake Pads</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Calipers</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Drum Brake Shoes</span></a>
+                <h4 class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">TRANSMISSION PARTS</span></h4>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Transmission Assemblies</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Pressure Plate</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Flywheels</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Clutch Desc</span></a>
+                <a href="#" class="accordeon-item__body opitin_menu1"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Clutch Kits</span></a>
+           </div>
+           <div class="accordeon-item" data-accordeon="8">
+               <li class="accordeon-item__title flex_li_menu"><a href="#">BODY PARTS</a><ion-icon name="arrow-dropdown" class="arrow_drop"></ion-icon></li>         
+                <a href="#"  class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Mirrors</span></a>
+                <a href="#"  class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Bannet & Tailigate Struts</span></a>
+                <a href="#"  class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Cables & Hinges</span></a>
+                <a href="#"  class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Fuel Tanks & Caps</span></a>
+                <a href="#"  class="accordeon-item__body opitin_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Grilles</span></a>
+                                    
+           </div>
+            <div class="accordeon-item" data-accordeon="9">
+               <li class="accordeon-item__title flex_li_menu"><a href="#">BLOG</a></li>         
+           </div> 
+       </div>
+       <div class="search_menu_inner" id="search_field">
+                <input type="text" class="input_search" placeholder="Search entire store here...">
+                <button class="button_search_inner button_opin"><ion-icon name="search"></ion-icon></button>
+        </div>
+        <div class="last_menu_header">
+            <div class="something_new">
+             <a href="#" class="other"><ion-icon name="person"  class="padding_right_ion"></ion-icon><span>My Account</span></a>
+             <a href="#" class="other"><ion-icon name="heart"  class="padding_right_ion"></ion-icon><span>My Wish list</span></a>
+             <a href="#" class="other"><ion-icon name="people"  class="padding_right_ion"></ion-icon><span>Sign In</span></a>
+             <a href="#" class="other"><ion-icon name="contact" class="padding_right_ion"></ion-icon><span>Create an Account</span></a>
+             </div>
+        </div>
+        <div class="under_bar">
+            <div class="container">
+                <div class="under_flex">
+                    <!-- logo -->
+                    <a href="/">
+                    <img src="img/logo_4.png" alt="logo img">
+                    </a>
+                    <div class="cart">
+                       <a href="cart.html" class="cart_header">
+                        <ion-icon ios="ios-cart" md="md-cart"></ion-icon>
+                        <span>My cart</span>
+                        <span class="cart_items" id="cart_informer">0 Items</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="container">
+                <button class="menu-switch" id="switch"><ion-icon name="menu"></ion-icon></button>
+                <nav class="menu-wrapper">
+                    <ul class="menu">
+                        <div class="menu_item_flex">
+                           <li class="menu_item">
+                                  <a href="" class="nav-link">INTERIOT<span class="lnr lnr-chevron-down arrow_down"></span></a>
+                                  <div class="under_menu">
+                                     <ul class="ul_inner">
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Tailored car mats</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Floor & Cargo Mats</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Car Seat Covers</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Steering Wheel Covers</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Storage & Organizator</span></a></li>
+                                     </ul>
+                                  </div>
+                            </li>
+                            <li class="menu_item">
+                                <a href="" class="nav-link">EXTERIOT<span class="lnr lnr-chevron-down arrow_down"></span></a>
+                                <div class="under_menu">
+                                     <ul class="ul_inner">
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Tow Bars</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Tow Bars Electric Kit</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Car Covers & Car Protection</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Cargo Management</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Exterior Car Decoration</span></a></li>
+                                     </ul>
+                                  </div>
+                            </li>
+                            <li class="menu_item">
+                                <a href="" class="nav-link">LIGHTING<span class="lnr lnr-chevron-down arrow_down"></span></a>
+                                <div class="under_menu">
+                                     <ul class="ul_inner">
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Headlight</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Tailights</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Indicator</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Cambination Tallight</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Brake light</span></a></li>
+                                     </ul>
+                                  </div>
+                            </li>
+                            <li class="menu_item">
+                                <a href="" class="nav-link">REPAIR PARTS<span class="lnr lnr-chevron-down arrow_down"></span></a>
+                                <div class="under_menu_big">
+                                    <ul class="accor">
+                                        <li class="big_accor">
+                                            <img src="https://ld-magento.template-help.com/magento_62000/pub/media/catalog/category/cat_5_3.jpg" alt="">
+                                             <div class="something_more">
+                                                <h2>ENGINE PARTS</h2>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Engine Assembly</span></a>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Engine Block</span></a>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Cylinder Head</span></a>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Turbo & Superchanger</span></a>
+                                                <a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Valve Covers</span></a>
+                                            </div>
+                                        </li>
+                                        <div class="border_virt"></div>
+                                        <li class="big_accor">
+                                            <img src="https://ld-magento.template-help.com/magento_62000/pub/media/catalog/category/cat_5_2.jpg" alt="">
+                                            <div class="something_more">
+                                                <h2>SUSPENSION PARTS</h2>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Shocks & Struts</span></a>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Air Suspension</span></a>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Coil Springs</span></a>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Leaf Springs</span></a>
+                                                <a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Torsion Bars</span></a>
+                                            </div>
+                                        </li>
+                                        <div class="border_virt"></div>
+                                        <li class="big_accor">
+                                            <img src="https://ld-magento.template-help.com/magento_62000/pub/media/catalog/category/cat_5_1.jpg" alt="">
+                                             <div class="something_more">
+                                                <h2>BRAKE PARTS</h2>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Brake Kits</span></a>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Rotors</span></a>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Brake Pads</span></a>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Calipers</span></a>
+                                                <a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Drum Brake Shoes</span></a>
+                                            </div>
+                                        </li>
+                                        <div class="border_virt"></div>
+                                        <li class="big_accor">
+                                            <img src="https://ld-magento.template-help.com/magento_62000/pub/media/catalog/category/cat_5_4.jpg" alt="">
+                                             <div class="something_more">
+                                                <h2>TRANSMISSION PARTS</h2>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Transmission Assemblies</span></a>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Pressure Plate</span></a>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Flywheels</span></a>
+                                                <a href="#" class="padding_bottom_menu"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Clutch Desc</span></a>
+                                                <a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Clutch Kits</span></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                           <li class="menu_item">
+                                <a href="" class="nav-link">BODY PARTS<span class="lnr lnr-chevron-down arrow_down"></span></a>
+                                <div class="under_menu">
+                                     <ul class="ul_inner">
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Mirrors</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Bannet & Tailigate Struts</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Cables & Hinges</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Fuel Tanks & Caps</span></a></li>
+                                        <li class="ul_inner_li"><a href="#"><span class="lnr lnr-chevron-right arrow_right"></span><span class="first_menu_wrap">Grilles</span></a></li>
+                                     </ul>
+                                  </div>
+                            </li>
+                            <li class="menu_item">
+                                <a href="" class="nav-link">BLOG</a>
+                            </li>
+                        </div>
+                        <form class="button_flex" action="" id="search1">
+                            <div class="button_search">
+                                <input type="text" class="input_search" placeholder="Search entire store here...">
+                                <button class="button_search_inner"><ion-icon name="search"></ion-icon></button>
+                            </div>
+                        </form>
+                        <button class="search" id="fav_icon1"><ion-icon name="search"></ion-icon></button>
+                        <button class="exit" id="search_close"><ion-icon name="close"></ion-icon></button>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+     </header>
+    <div class="main">    
+        <div class="main_slider slider-pro" id="slider">
+          <div class="sp-slides">
+               <div class="sl_slide sp-slide">
+                   <img class = "sp-image " src="https://ld-magento.template-help.com/magento_62000/pub/media/wysiwyg/slide_1_lt_5.jpg" alt="">
+                   <span class="sl_text" >THE QUALITY IS BEYOND EXCELLENCE</span>
+                   <span class="sl_text1">BUY TRUSTWORTHY</span>
+                   <span class="sl_text2">CAR PARTS</span>
+                   <button class="sl_text3">SHOP NOW!</button>
+               </div>
+               <div class="sl_slide sp-slide">
+                   <img class = "sp-image " src="https://ld-magento.template-help.com/magento_62000/pub/media/wysiwyg/slide_2_lt_5.jpg" alt="">
+                   <span class="sl_text_second">BUY TRUSTWORTHY CAR PARTS</span>
+                   <span class="sl_text_second1">TURBOCHARGER &</span>
+                   <span class="sl_text_second2">COMPONENINTS</span>
+                   <button class="sl_text3">SHOP NOW!</button>   
+               </div>
+               <div class="sl_slide sp-slide">
+                   <img class = "sp-image " src="https://ld-magento.template-help.com/magento_62000/pub/media/wysiwyg/slide_3_lt_5.jpg" alt="">
+                   <span class="sl_text">AUTO BODY PARTS & RESTORATION</span>
+                   <span class="sl_text1">HIGH QUALITY</span>
+                   <span class="sl_text2">PRODUCTS</span>
+                   <button class="sl_text3">SHOP NOW!</button>    
+               </div>
+           </div>
+        </div>
+        <ul class="products">
+            <li class="icon_products">
+                <img src="img/Magetique_files/cat_1_lt_5.jpg" alt=""> 
+                <span class="discrb_product">ENGINE</span>
+                <span class="name_product">PARTS</span>
+                <div class="add_product">
+                    <a href="">Engine Assembly</a>
+                    <span>,</span>
+                    <a href="">Engine Block</a>
+                </div>
+                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
+            </li>
+            <li class="icon_products">
+                <img src="img/Magetique_files/cat_2_lt_5.jpg" alt="">
+                <span class="discrb_product">SUSPRENSION</span>
+                <span class="name_product">PARTS</span>
+                <div class="add_product">
+                    <a href="">Shock & Struts</a>
+                    <span>,</span>
+                    <a href="">Air Suspension</a>
+                </div>
+                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
+            </li>
+            <li class="icon_products">
+                <img src="img/Magetique_files/cat_3_lt_5.jpg" alt="">
+                <span class="discrb_product">BRAKE</span>
+                <span class="name_product">PARTS</span>
+                <div class="add_product">
+                    <a href="">Brake Kits</a>
+                    <span>,</span>
+                    <a href="">Rotors</a>
+                </div>
+                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
+            </li>
+            <li class="icon_products">
+                <img src="img/Magetique_files/cat_4_lt_5_1.jpg" alt="">
+                <span class="discrb_product">EXHAUST</span>
+                <span class="name_product">PARTS</span>
+                <div class="add_product">
+                    <a href="">Catalytics</a>
+                    <span>,</span>
+                    <a href="">Mufflers</a>
+                </div>
+                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
+            </li>
+            <li class="icon_products">
+                <img src="img/Magetique_files/cat_5_lt_5.jpg" alt="">
+                <span class="discrb_product">STREERING</span>
+                <span class="name_product">PARTS</span>
+                <div class="add_product">
+                    <a href="">Racks</a>
+                    <span>,</span>
+                    <a href="">Pumps</a>
+                </div>
+                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
+            </li>
+            <li class="icon_products">
+                <img src="img/Magetique_files/cat_6_lt_5.jpg" alt="">
+                <span class="discrb_product">TRANSMISSION</span>
+                <span class="name_product">PARTS</span>
+                <div class="add_product">
+                    <a href="">Transmission Assemblies</a>
+                    <span>,</span>
+                    <a href="">Pressure Plate</a>
+                </div>
+                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
+            </li>
+            <li class="icon_products">
+                <img src="img/Magetique_files/cat_7_lt_5.jpg" alt="">
+                <span class="discrb_product">BODY</span>
+                <span class="name_product">KITS</span>
+                <div class="add_product">
+                    <a href="">Ground Effects</a>
+                    <span>,</span>
+                    <a href="">Side Skirts</a>
+                </div>
+                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
+            </li>
+            <li class="icon_products">
+                <img src="img/Magetique_files/cat_8_lt_5.jpg" alt="">
+                <span class="discrb_product">MOTOR</span>
+                <span class="name_product">OIL</span>
+                <div class="add_product">
+                    <a href="">Brake Fluids</a>
+                    <span>,</span>
+                    <a href="">Motor Oil</a>
+                </div>
+                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
+            </li>
+        </ul>
+        <div class="top_prod">
+            <div class="container">
+                <h1 class="top_h1">Top Rated</h1>
+            </div>
+            <div class="slider-wrapper">
+               <button class="left_but prevSlide" id="first_prev_btn"><span class=" lnr lnr-chevron-left"></span></button>
+               <button class="right_but nextSlide" id="first_next_btn"><span class="lnr lnr-chevron-right"></span></button>
+                <div class="slider_prod_top" id="slider_prod_top">
+                     
+                </div>
+            </div>
+        </div>
+        <div class="line_between">
+            <div class="container">
+                <div class="full_border"></div>
+            </div>
+        </div>
+        <div class="prod_bottom">
+            <div class="container">
+                <h1 class="top_h1">Special Products</h1>
+            </div>
+            <div class="slider-wrapper">
+                <button class="left_but but_left_main prevSlide" id="first_prev1_btn"><span class=" lnr lnr-chevron-left"></span></button>
+               <button class="right_but but_right_main nextSlide" id="first_next1_btn"><span class="lnr lnr-chevron-right"></span></button>
+                <div class="slider_prod_bottom" id="slider_prod_bottom">
+                     
+                </div>
+            </div>
+        </div>
+        <div class="three_window">
+            <div class="first_window">
+                <div class="discounts">
+                   <div class="discounts_inner">
+                        <span>Suspension</span>
+                        <span> Parts</span>
+                        <span class="off">20 % off</span>
+                        <button class="shop_more">SHOP NOW</button>
+                    </div>
+                </div>
+            </div>
+            <div class="second_window">
+                <div class="lights">
+                    <img src="img/Magetique_files/img_41_spare.jpg" alt="">
+                    <div class="light">
+                        <span>AUTO</span>
+                        <span>LIGHTING</span>
+                        <br>     
+                        <button class="shop_more">SHOP NOW</button>
+                    </div>
+                </div>
+            </div>
+            <div class="third_window">
+                <div class="spoilers">
+                    <img src="img/Magetique_files/img_42_spare.jpg" alt="">
+                </div>
+                <div class="spoiler">
+                   <div class="spoil">
+                    <span>CAR</span>
+                    <span>SPOILERS</span>
+                    <span class="skidki">50 % off</span>
+                     <button class="shop_more_add">SHOP NOW</button>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="container">
+                <h1 class="from_the_blog">From the Blog</h1>
+            </div>
+        </div>
+        <div class="last_slider">
+            <div class="slider-wrapper">
+                <button class="left_but prevSlide" id="first_prev2_btn"><span class=" lnr lnr-chevron-left"></span></button>
+                <button class="right_but nextSlide" id="first_next2_btn"><span class="lnr lnr-chevron-right"></span></button>
+                <div class="slider">
+                     <div class="product">
+                      <div class="img-wrapper">
+                        <img class="super_car" src="img/Magetique_files/3.jpg" alt="" />
+                      </div>
+                      <div class="product-info-wrapper">
+                            <a href="#"><h3>Parther's Pick: Kincrome Tools</h3></a>
+                            <div class="product-info">
+                            <h4 class="product-name">Car is a part of culture because we spend a significant amount of time of our lives by the steering wheel.</h4>
+                     </div>
+                     <div class="add">
+                        <div class="first_icon">
+                            <ion-icon name="calendar" class="calendar"></ion-icon>
+                            <span>Jan 17, 2017</span>
+                        </div>
+                        <div class="second_icon">
+                            <ion-icon name="person" class="calendar"></ion-icon>
+                            <span>by Dutty</span>
+                        </div>
+                        <div class="third_icon">
+                            <ion-icon name="chatbubbles" class="calendar"></ion-icon>
+                            <span>0</span>
+                        </div>
+                    </div>
+                        <button class="read_more1">Read more</button>
+                      </div>
+                    </div>
+                    <div class="product">
+                        <div class="img-wrapper">
+                            <img class="super_car" src="img/Magetique_files/5.jpg" alt="" />
+                        </div>
+                        <div class="product-info-wrapper">
+                            <a href="#"><h3>Let’s Clear The Air About K&N Filters</h3></a>
+                                <div class="product-info">
+                                    <h4 class="product-name" id="text_cut">We are honored to present you our products. We provide auto spare parts and our main goal is to satisfy all of our customers. The secret of our success is that our goods are an unbeaten combination of high quality and fair price. We produce and sell only professional parts - that’s why we have a great number of devoted clients all over the country and there is nothing better than the happy and satisfied customers. Our goods are real bestsellers; we are offering a great list of some unique spare parts that have no analogues. We believe that everything must be perfect in our business.
+
+So, if you like listening to the sound of your engine, or if you like the smell of burning rubber of your wheels, you are in the right place. Even if you don’t like speed and power, racing and all this stuff, but you love your car, you are still in the right place because you might be interested in professional spare parts. Nowadays car is not just a vehicle, it is a part of you, it influences your style and your character. Car is a part of culture because we spend a significant amount of time of our lives by the steering wheel. We spend endless hours in traffic jams; we like to eat in a car, like to listen to music and so on. Our industry made a great number of legendary cars, and this is a true argument that it is essential part of our life. You know, psychologists claim that style of driving shows some striking features of character. And you know it is true. Car is more than a piece of a metal, it became a social phenomenon. Have you ever noticed that we often try to talk to the car as if it was a human?
+
+Just remember that we estimate our clients and improve our support and delivery systems. And don’t forget you can save your money with the help of our system of benefits and discounts.
+
+Our parts are the standard of real reliability and durability. We use the achievements of progress and provide some new technologies. Our manufacturers and vendors guarantee its high quality.
+
+</h4>
+                                </div>
+                            <div class="add">
+                            <div class="first_icon">
+                                <ion-icon name="calendar" class="calendar"></ion-icon>
+                                <span>Jan 09, 2017</span>
+                            </div>
+                            <div class="second_icon">
+                                <ion-icon name="person" class="calendar"></ion-icon>
+                                <span>by Donato Dazzy</span>
+                            </div>
+                            <div class="third_icon">
+                                <ion-icon name="chatbubbles" class="calendar"></ion-icon>
+                                <span>0</span>
+                            </div>
+                        </div>
+                        <button class="read_more1">Read more</button>
+                      </div>
+                    </div>
+                      <div class="product">
+                        <div class="img-wrapper">
+                            <img class="super_car" src="img/Magetique_files/2_1.jpg" alt="" />
+                        </div>
+                        <div class="product-info-wrapper">
+                            <a href="#"><h3>EXEDY: World-Class Clutch Kits</h3></a>
+                                <div class="product-info">
+                                    <h4 class="product-name">We are honored to present you our products. We provide auto spare parts and our main goal is to satisfy all of our customers.</h4>
+                                </div>
+                            <div class="add">
+                            <div class="first_icon">
+                                <ion-icon name="calendar" class="calendar"></ion-icon>
+                                <span>Jan 09, 2017</span>
+                            </div>
+                            <div class="second_icon">
+                                <ion-icon name="person" class="calendar"></ion-icon>
+                                <span>by Dutty</span>
+                            </div>
+                            <div class="third_icon">
+                                <ion-icon name="chatbubbles" class="calendar"></ion-icon>
+                                <span>0</span>
+                            </div>
+                        </div>
+                        <button class="read_more1">Read more</button>
+                      </div>
+                    </div>
+                    <div class="product">
+                        <div class="img-wrapper">
+                            <img class="super_car" src="img/Magetique_files/4_1.jpg" alt="" />
+                        </div>
+                        <div class="product-info-wrapper">
+                            <a href="#"><h3>Spares Box Road Test: Liqui-Moly Engine Oil</h3></a>
+                                <div class="product-info">
+                                    <h4 class="product-name" id="text_cut1">Our parts are the standard of real reliability and durability. We use the achievements of progress and provide some new technologies. Our manufacturers and vendors guarantee its high quality.</h4>
+                                </div>
+                        <div class="add">
+                            <div class="first_icon">
+                                <ion-icon name="calendar" class="calendar"></ion-icon>
+                                <span>Jan 08, 2017</span>
+                            </div>
+                            <div class="second_icon">
+                                <ion-icon name="person" class="calendar"></ion-icon>
+                                <span>by Dutty</span>
+                            </div>
+                            <div class="third_icon">
+                                <ion-icon name="chatbubbles" class="calendar"></ion-icon>
+                                <span>0</span>
+                            </div>
+                        </div>
+                        <button class="read_more1">Read more</button>
+                      </div>
+                    </div>
+                    <div class="product">
+                        <div class="img-wrapper">
+                            <img class="super_car" src="img/Magetique_files/1_2.jpg" alt="" />
+                        </div>
+                        <div class="product-info-wrapper">
+                            <a href="#"><h3>Parther's Pick: Kincrome Tools</h3></a>
+                                <div class="product-info">
+                                    <h4 class="product-name">Car is a part of culture because we spend a significant amount of time of our lives by the steering wheel.</h4>
+                                </div>
+                            <div class="add">
+                            <div class="first_icon">
+                                <ion-icon name="calendar" class="calendar"></ion-icon>
+                                <span>Jan 17, 2017</span>
+                            </div>
+                            <div class="second_icon">
+                                <ion-icon name="person" class="calendar"></ion-icon>
+                                <span>by Dutty</span>
+                            </div>
+                            <div class="third_icon">
+                                <ion-icon name="chatbubbles" class="calendar"></ion-icon>
+                                <span>0</span>
+                            </div>
+                        </div>
+                        <button class="read_more1">Read more</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- <div class="container">
+                <div class="product">
+                  <div class="img-wrapper">
+                    <img src="https://ld-magento.template-help.com/magento_62000/pub/media/tm_blog/1/_/1_2.jpg" alt="" />
+                  </div>
+                  <div class="product-info-wrapper">
+                   <a href="#"><h3>Parther's Pick: Kincrome Tools</h3></a>
+                    <div class="product-info">
+                      <h4 class="product-name">Car is a part of culture because we spend a significant amount of time of our lives by the steering wheel.</h4>
+                    </div>
+                    <div class="add">
+                       <div class="first_icon">
+                        <ion-icon name="calendar" class="calendar"></ion-icon>
+                        <span>Jan 17, 2017</span>
+                        </div>
+                        <div class="second_icon">
+                        <ion-icon name="person" class="calendar"></ion-icon>
+                        <span>by Dutty</span>
+                        </div>
+                        <div class="third_icon">
+                        <ion-icon name="chatbubbles" class="calendar"></ion-icon>
+                        <span>0</span>
+                        </div>
+                    </div>
+                    <button class="read_more1">Read more</button>
+                  </div>
+                </div>
+            </div> -->
+        
+    </div>
+    </div>
+    <footer>
+       <div class="parallax-window subscribe_field" data-parallax="scroll" data-image-src="img/lam1.jpg">
+           <div class="container">
+               <div class="footer_top">
+                   <div class="one">
+                    <span class="span_search">Get the Latest News Delivered Daily.</span>
+                    <span class="span_detal">Give us your email and you will be daily updated with the latest events, in detail.</span>
+                    </div>
+                    <form action="#" class="input_foot" id="subscribe_form">
+                        <div class="icon_mail"><ion-icon name="mail" class="mall"></ion-icon></div>
+                        <input type="email" class="input_sear" placeholder="Enter your email address" name="subscriber_email" required>
+                        <button type="submit" class="subscribe" id="subscribe_btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="under_footer">
+            <div class="container">
+               <div class="flex_under">
+                    <div class="top_under">
+                       <div class="img_fooetr">
+                        <img src="https://ld-magento.template-help.com/magento_62000/pub/media/theme_options/websites/5/logo_4.png" alt="">
+                        </div>
+                        <div class="call_back">
+                            <ul class="call_ul">
+                                <li><a href="#" class="border"><i class="ion-social-facebook"></i></a></li>
+                                <li><a href="#" class="border"><i class="ion-social-twitter"></i></a></li>
+                                <li><a href="#" class="border"><i class="ion-social-googleplus"></i></a></li>
+                                <li><a href="#" class="border"><i class="ion-social-instagram-outline"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="last_ul">
+                    <ul class="ul_footer">
+                        <li class="margin_left"><a href="#">Shipping & Delivery</a></li>
+                        <li class="margin_left"><a href="#">Secure payment</a></li>
+                        <li class="margin_left"><a href="#">Support</a></li>
+                        <li class="margin_left"><a href="#">Guarantee</a></li>
+                        <li class="margin_left"><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                    <ul class="ul_second">
+                        <li class="margin_left second_ul"><a href="#">About Us</a></li>
+                        <li class="margin_left second_ul"><a href="#">Customer Service</a></li>
+                        <li class="margin_left second_ul"><a href="#">Template Settings</a></li>
+                    </ul>
+                         <ul class="ul_third">
+                        <li class="margin_left"><a href="#">Privacy Policy</a></li>
+                        <li class="margin_left"><a href="#">Orders and Returns</a></li>
+                        <li class="margin_left"><a href="#">Search Terms</a></li>
+                        <li class="margin_left"><a href="#">Contact Us</a></li>
+                        <li class="margin_left"><a href="#">Advanced Search</a></li>
+                        <li class="margin_left"><a href="#">Newsletter Subscription</a></li>
+                    </ul>
+                    <div class="span_end">
+                        <span>© 2019 Magento Demo Store. All Rights Reserved.</span>
+                    </div>
+                   </div>
+                </div>
+               <!--  <div class="open_door">
+                    <div>
+                        <button id="information" class="information">information<ion-icon name="arrow-dropdown"></ion-icon></button>
+                        <div class="blocked" id="textBlockDesc">
+                             <img src="https://ld-magento.template-help.com/magento_62000/pub/media/theme_options/websites/5/logo_4.png" alt="">
+                            <ul class="call_ul" >
+                                <li><a href="#" class="border"><i class="ion-social-facebook"></i></a></li>
+                                <li><a href="#" class="border"><i class="ion-social-twitter"></i></a></li>
+                                <li><a href="#" class="border"><i class="ion-social-googleplus"></i></a></li>
+                                <li><a href="#" class="border"><i class="ion-social-instagram-outline"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <button id="why_buy" class="why_buy">why buy from us<ion-icon name="arrow-dropdown"></ion-icon></button>
+                    </div>
+                    <div>
+                        <button id="another_info" class="another_info">information<ion-icon name="arrow-dropdown"></ion-icon></button>
+                    </div>
+                    </div> -->
+                    <div class="accordeon" id="accordeon">
+                       <div class="accordeon-item" data-accordeon="1">
+                           <span class="accordeon-item__title">information<ion-icon name="arrow-dropdown"></ion-icon></span>
+                            <img class="accordeon-item__body width_img" src="https://ld-magento.template-help.com/magento_62000/pub/media/theme_options/websites/5/logo_4.png" alt="">
+                            <ul class="call_ul accordeon-item__body" class="accordeon-item__body" >
+                               <div class="flex_menu_inner">
+                                <li><a href="#" class="border"><i class="ion-social-facebook"></i></a></li>
+                                <li><a href="#" class="border"><i class="ion-social-twitter"></i></a></li>
+                                <li><a href="#" class="border"><i class="ion-social-googleplus"></i></a></li>
+                                <li><a href="#" class="border"><i class="ion-social-instagram-outline"></i></a></li>
+                                </div>
+                            </ul>
+                       </div>
+                       <div class="accordeon-item" data-accordeon="2">
+                           <span class="accordeon-item__title">why buy from us<ion-icon name="arrow-dropdown"></ion-icon></span>
+                            <a href="#" class="accordeon-item__body color_accor">Shipping & Delivery</a>
+                            <a href="#" class="accordeon-item__body color_accor">Secure payment</a>
+                            <a href="#" class="accordeon-item__body color_accor">Support</a>
+                            <a href="#" class="accordeon-item__body color_accor">Guarantee</a>
+                            <a href="#" class="accordeon-item__body color_accor">Terms & Conditions</a>
+                       </div>
+                       <div class="accordeon-item" data-accordeon="3">
+                           <span class="accordeon-item__title">information<ion-icon name="arrow-dropdown"></ion-icon></span>
+                           <a href="#" class="accordeon-item__body color_accor">About Us</a>
+                           <a href="#" class="accordeon-item__body color_accor">Customer Service</a>
+                           <a href="#" class="accordeon-item__body color_accor">Template Settings</a>               
+                           <a href="#" class="accordeon-item__body color_accor">Privacy Policy</a>
+                           <a href="#" class="accordeon-item__body color_accor">Orders and Returns</a>
+                           <a href="#" class="accordeon-item__body color_accor">Search Terms</a>
+                           <a href="#" class="accordeon-item__body color_accor">Contact Us</a>
+                           <a href="#" class="accordeon-item__body color_accor">Advanced Search</a>
+                           <a href="#" class="accordeon-item__body color_accor">Newsletter Subscription</a>
+                       </div>
+                   </div>
+                        <span class="oplki">© 2019 Magento Demo Store. All Rights Reserved.</span>
+                
+            </div>
+        </div>
+    </footer>
+    <script src="js/authentication.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+
+        var products = [];
+        getProductsFromBase(getNewProducts).then(function(){
+            
+            var cart_buttons = document.querySelectorAll('button[data-product-value]');
+            cart_buttons.forEach(function(item){
+                item.addEventListener('click', function(e){
+                    var product_value = this.getAttribute('data-product-value');
+                    addToCart(product_value, products);
+                    globalMessage("<ion-icon name=\"checkmark\"></ion-icon><span>Item added to cart!</span>", 'success');
+                });
+            });
+            
+            $('.slider_prod_top').slick({
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              nextArrow:'#first_next_btn.nextSlide',
+              prevArrow:'#first_prev_btn.prevSlide',
+              swipe: false,
+              infinite: true,
+              responsive: [
+                          {
+                                breakpoint: 1201,
+                                settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1,
+                              }
+                          },
+                         {
+                            breakpoint: 991,
+                            settings: {
+                              arrows: false,
+                              slidesToShow: 2,
+                              slidesToScroll: 1,
+                            }
+                          },
+                            {
+                                breakpoint: 541,
+                                settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                              }
+                          },
+                          ]
+            });
+            $('.slider_prod_bottom').slick({
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              swipe: false,
+              infinite: true,
+              nextArrow:'#first_next1_btn.nextSlide',
+              prevArrow:'#first_prev1_btn.prevSlide',
+              initialSlide: 3,
+              responsive: [
+                          {
+                            breakpoint: 1201,
+                            settings: {
+                              arrows: false,
+                              slidesToShow: 3,
+                              slidesToScroll: 1,
+                            }
+                          },
+                         {
+                            breakpoint: 991,
+                            settings: {
+                              arrows: false,
+                              slidesToShow: 2,
+                              slidesToScroll: 1,
+                            }
+                          },
+                            {
+                                breakpoint: 541,
+                                settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                              }
+                          },
+                        ]
+            });
+            checkCartInformer();
+            document.getElementById('page-preloader').classList.add('done'); 
+            document.querySelector('body').classList.remove('lock');
+        });
+        
+        $(document).ready(function(){
+            $('.slider').slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              swipe: false,
+              infinite: false,
+              nextArrow:'#first_next2_btn.nextSlide',
+              prevArrow:'#first_prev2_btn.prevSlide',
+              responsive: [
+                         {
+                            breakpoint: 991,
+                            settings: {
+                              arrows: false,
+                              slidesToShow: 2,
+                              slidesToScroll: 1,
+                            }
+                          },
+                            {
+                            breakpoint: 767,
+                            settings: {
+                              arrows: false,
+                              slidesToShow: 1,
+                              slidesToScroll: 1,
+                            }
+                          },
+
+                        ]
+            });
+
+            
+
+            
+        });
+    </script>   
+    
+    
+
+    
+    <script src="js/parallax.js"></script>
+    <script src="js/jq.js"></script>
+    <script src="js/exit.js"></script>
+    <script> 
+        $('.parallax-window').parallax({imageSrc: 'img/lam1.jpg'});
+    </script>
+    <script src="js/top_menu.js"></script>
+
+
+</body>
+</html>
