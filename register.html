@@ -2,48 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Magetique</title>
-    
-    <!-- css -->
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
-    
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/grid.css">
-    
-    <!--Slick-->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <title>Document</title>
+     <!--  style -->
     <link rel="stylesheet" href="css/style_diplom.css">
-<!--    slider pro-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slider-pro/1.5.0/css/slider-pro.min.css">
+    <link rel="stylesheet" href="css/grid.css">   
+    <link rel="stylesheet" href="css/style.min.css"> 
     <link rel="stylesheet" href="css/responsive.css">
     
-   
-    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
-    <script src="js/firebase_init.js"></script>
-    <script src="js/products.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shopify-cartjs/0.4.1/cart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- other -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
     <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slider-pro/1.5.0/js/jquery.sliderPro.js"></script>
-    <script src="js/scripts.js"></script>
-    
-    
-    
+    <script src="js/test.js"></script>
+    <script>
+        authDetect();
+    </script>
 </head>
 <body class="lock">
    <div id="page-preloader" class="preloader">
         <div class="loader"></div>
     </div>
     <div id="global_message" class="global-message"></div>
-    <div class="wrapper">
     <header>
         <div class="above_bar">
             <div class="container">
@@ -162,10 +145,9 @@
                     <img src="img/logo_4.png" alt="logo img">
                     </a>
                     <div class="cart">
-                       <a href="cart.html" class="cart_header">
+                       <a href="#" class="cart_header">
                         <ion-icon ios="ios-cart" md="md-cart"></ion-icon>
                         <span>My cart</span>
-                        <span class="cart_items" id="cart_informer">0 Items</span>
                         </a>
                     </div>
                 </div>
@@ -296,389 +278,45 @@
             </div>
         </div>
      </header>
-    <div class="main">    
-        <div class="main_slider slider-pro" id="slider">
-          <div class="sp-slides">
-               <div class="sl_slide sp-slide">
-                   <img class = "sp-image " src="https://ld-magento.template-help.com/magento_62000/pub/media/wysiwyg/slide_1_lt_5.jpg" alt="">
-                   <span class="sl_text" >THE QUALITY IS BEYOND EXCELLENCE</span>
-                   <span class="sl_text1">BUY TRUSTWORTHY</span>
-                   <span class="sl_text2">CAR PARTS</span>
-                   <button class="sl_text3">SHOP NOW!</button>
-               </div>
-               <div class="sl_slide sp-slide">
-                   <img class = "sp-image " src="https://ld-magento.template-help.com/magento_62000/pub/media/wysiwyg/slide_2_lt_5.jpg" alt="">
-                   <span class="sl_text_second">BUY TRUSTWORTHY CAR PARTS</span>
-                   <span class="sl_text_second1">TURBOCHARGER &</span>
-                   <span class="sl_text_second2">COMPONENINTS</span>
-                   <button class="sl_text3">SHOP NOW!</button>   
-               </div>
-               <div class="sl_slide sp-slide">
-                   <img class = "sp-image " src="https://ld-magento.template-help.com/magento_62000/pub/media/wysiwyg/slide_3_lt_5.jpg" alt="">
-                   <span class="sl_text">AUTO BODY PARTS & RESTORATION</span>
-                   <span class="sl_text1">HIGH QUALITY</span>
-                   <span class="sl_text2">PRODUCTS</span>
-                   <button class="sl_text3">SHOP NOW!</button>    
-               </div>
-           </div>
-        </div>
-        <ul class="products">
-            <li class="icon_products">
-                <img src="img/Magetique_files/cat_1_lt_5.jpg" alt=""> 
-                <span class="discrb_product">ENGINE</span>
-                <span class="name_product">PARTS</span>
-                <div class="add_product">
-                    <a href="">Engine Assembly</a>
-                    <span>,</span>
-                    <a href="">Engine Block</a>
-                </div>
-                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
-            </li>
-            <li class="icon_products">
-                <img src="img/Magetique_files/cat_2_lt_5.jpg" alt="">
-                <span class="discrb_product">SUSPRENSION</span>
-                <span class="name_product">PARTS</span>
-                <div class="add_product">
-                    <a href="">Shock & Struts</a>
-                    <span>,</span>
-                    <a href="">Air Suspension</a>
-                </div>
-                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
-            </li>
-            <li class="icon_products">
-                <img src="img/Magetique_files/cat_3_lt_5.jpg" alt="">
-                <span class="discrb_product">BRAKE</span>
-                <span class="name_product">PARTS</span>
-                <div class="add_product">
-                    <a href="">Brake Kits</a>
-                    <span>,</span>
-                    <a href="">Rotors</a>
-                </div>
-                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
-            </li>
-            <li class="icon_products">
-                <img src="img/Magetique_files/cat_4_lt_5_1.jpg" alt="">
-                <span class="discrb_product">EXHAUST</span>
-                <span class="name_product">PARTS</span>
-                <div class="add_product">
-                    <a href="">Catalytics</a>
-                    <span>,</span>
-                    <a href="">Mufflers</a>
-                </div>
-                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
-            </li>
-            <li class="icon_products">
-                <img src="img/Magetique_files/cat_5_lt_5.jpg" alt="">
-                <span class="discrb_product">STREERING</span>
-                <span class="name_product">PARTS</span>
-                <div class="add_product">
-                    <a href="">Racks</a>
-                    <span>,</span>
-                    <a href="">Pumps</a>
-                </div>
-                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
-            </li>
-            <li class="icon_products">
-                <img src="img/Magetique_files/cat_6_lt_5.jpg" alt="">
-                <span class="discrb_product">TRANSMISSION</span>
-                <span class="name_product">PARTS</span>
-                <div class="add_product">
-                    <a href="">Transmission Assemblies</a>
-                    <span>,</span>
-                    <a href="">Pressure Plate</a>
-                </div>
-                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
-            </li>
-            <li class="icon_products">
-                <img src="img/Magetique_files/cat_7_lt_5.jpg" alt="">
-                <span class="discrb_product">BODY</span>
-                <span class="name_product">KITS</span>
-                <div class="add_product">
-                    <a href="">Ground Effects</a>
-                    <span>,</span>
-                    <a href="">Side Skirts</a>
-                </div>
-                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
-            </li>
-            <li class="icon_products">
-                <img src="img/Magetique_files/cat_8_lt_5.jpg" alt="">
-                <span class="discrb_product">MOTOR</span>
-                <span class="name_product">OIL</span>
-                <div class="add_product">
-                    <a href="">Brake Fluids</a>
-                    <span>,</span>
-                    <a href="">Motor Oil</a>
-                </div>
-                <a href="#" class="view_more">VIEW MORE <ion-icon name="arrow-forward" class="icon_right"></ion-icon></a>
-            </li>
-        </ul>
-        <div class="top_prod">
-            <div class="container">
-                <h1 class="top_h1">Top Rated</h1>
-            </div>
-            <div class="slider-wrapper">
-               <button class="left_but prevSlide" id="first_prev_btn"><span class=" lnr lnr-chevron-left"></span></button>
-               <button class="right_but nextSlide" id="first_next_btn"><span class="lnr lnr-chevron-right"></span></button>
-                <div class="slider_prod_top" id="slider_prod_top">
-                     
-                </div>
-            </div>
-        </div>
-        <div class="line_between">
-            <div class="container">
-                <div class="full_border"></div>
-            </div>
-        </div>
-        <div class="prod_bottom">
-            <div class="container">
-                <h1 class="top_h1">Special Products</h1>
-            </div>
-            <div class="slider-wrapper">
-                <button class="left_but but_left_main prevSlide" id="first_prev1_btn"><span class=" lnr lnr-chevron-left"></span></button>
-               <button class="right_but but_right_main nextSlide" id="first_next1_btn"><span class="lnr lnr-chevron-right"></span></button>
-                <div class="slider_prod_bottom" id="slider_prod_bottom">
-                     
-                </div>
-            </div>
-        </div>
-        <div class="three_window">
-            <div class="first_window">
-                <div class="discounts">
-                   <div class="discounts_inner">
-                        <span>Suspension</span>
-                        <span> Parts</span>
-                        <span class="off">20 % off</span>
-                        <button class="shop_more">SHOP NOW</button>
-                    </div>
-                </div>
-            </div>
-            <div class="second_window">
-                <div class="lights">
-                    <img src="img/Magetique_files/img_41_spare.jpg" alt="">
-                    <div class="light">
-                        <span>AUTO</span>
-                        <span>LIGHTING</span>
-                        <br>     
-                        <button class="shop_more">SHOP NOW</button>
-                    </div>
-                </div>
-            </div>
-            <div class="third_window">
-                <div class="spoilers">
-                    <img src="img/Magetique_files/img_42_spare.jpg" alt="">
-                </div>
-                <div class="spoiler">
-                   <div class="spoil">
-                    <span>CAR</span>
-                    <span>SPOILERS</span>
-                    <span class="skidki">50 % off</span>
-                     <button class="shop_more_add">SHOP NOW</button>
-                     </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="container">
-                <h1 class="from_the_blog">From the Blog</h1>
-            </div>
-        </div>
-        <div class="last_slider">
-            <div class="slider-wrapper">
-                <button class="left_but prevSlide" id="first_prev2_btn"><span class=" lnr lnr-chevron-left"></span></button>
-                <button class="right_but nextSlide" id="first_next2_btn"><span class="lnr lnr-chevron-right"></span></button>
-                <div class="slider">
-                     <div class="product">
-                      <div class="img-wrapper">
-                        <img class="super_car" src="img/Magetique_files/3.jpg" alt="" />
-                      </div>
-                      <div class="product-info-wrapper">
-                            <a href="#"><h3>Parther's Pick: Kincrome Tools</h3></a>
-                            <div class="product-info">
-                            <h4 class="product-name">Car is a part of culture because we spend a significant amount of time of our lives by the steering wheel.</h4>
-                     </div>
-                     <div class="add">
-                        <div class="first_icon">
-                            <ion-icon name="calendar" class="calendar"></ion-icon>
-                            <span>Jan 17, 2017</span>
-                        </div>
-                        <div class="second_icon">
-                            <ion-icon name="person" class="calendar"></ion-icon>
-                            <span>by Dutty</span>
-                        </div>
-                        <div class="third_icon">
-                            <ion-icon name="chatbubbles" class="calendar"></ion-icon>
-                            <span>0</span>
-                        </div>
-                    </div>
-                        <button class="read_more1">Read more</button>
-                      </div>
-                    </div>
-                    <div class="product">
-                        <div class="img-wrapper">
-                            <img class="super_car" src="img/Magetique_files/5.jpg" alt="" />
-                        </div>
-                        <div class="product-info-wrapper">
-                            <a href="#"><h3>Let’s Clear The Air About K&N Filters</h3></a>
-                                <div class="product-info">
-                                    <h4 class="product-name" id="text_cut">We are honored to present you our products. We provide auto spare parts and our main goal is to satisfy all of our customers. The secret of our success is that our goods are an unbeaten combination of high quality and fair price. We produce and sell only professional parts - that’s why we have a great number of devoted clients all over the country and there is nothing better than the happy and satisfied customers. Our goods are real bestsellers; we are offering a great list of some unique spare parts that have no analogues. We believe that everything must be perfect in our business.
-
-So, if you like listening to the sound of your engine, or if you like the smell of burning rubber of your wheels, you are in the right place. Even if you don’t like speed and power, racing and all this stuff, but you love your car, you are still in the right place because you might be interested in professional spare parts. Nowadays car is not just a vehicle, it is a part of you, it influences your style and your character. Car is a part of culture because we spend a significant amount of time of our lives by the steering wheel. We spend endless hours in traffic jams; we like to eat in a car, like to listen to music and so on. Our industry made a great number of legendary cars, and this is a true argument that it is essential part of our life. You know, psychologists claim that style of driving shows some striking features of character. And you know it is true. Car is more than a piece of a metal, it became a social phenomenon. Have you ever noticed that we often try to talk to the car as if it was a human?
-
-Just remember that we estimate our clients and improve our support and delivery systems. And don’t forget you can save your money with the help of our system of benefits and discounts.
-
-Our parts are the standard of real reliability and durability. We use the achievements of progress and provide some new technologies. Our manufacturers and vendors guarantee its high quality.
-
-</h4>
-                                </div>
-                            <div class="add">
-                            <div class="first_icon">
-                                <ion-icon name="calendar" class="calendar"></ion-icon>
-                                <span>Jan 09, 2017</span>
-                            </div>
-                            <div class="second_icon">
-                                <ion-icon name="person" class="calendar"></ion-icon>
-                                <span>by Donato Dazzy</span>
-                            </div>
-                            <div class="third_icon">
-                                <ion-icon name="chatbubbles" class="calendar"></ion-icon>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <button class="read_more1">Read more</button>
-                      </div>
-                    </div>
-                      <div class="product">
-                        <div class="img-wrapper">
-                            <img class="super_car" src="img/Magetique_files/2_1.jpg" alt="" />
-                        </div>
-                        <div class="product-info-wrapper">
-                            <a href="#"><h3>EXEDY: World-Class Clutch Kits</h3></a>
-                                <div class="product-info">
-                                    <h4 class="product-name">We are honored to present you our products. We provide auto spare parts and our main goal is to satisfy all of our customers.</h4>
-                                </div>
-                            <div class="add">
-                            <div class="first_icon">
-                                <ion-icon name="calendar" class="calendar"></ion-icon>
-                                <span>Jan 09, 2017</span>
-                            </div>
-                            <div class="second_icon">
-                                <ion-icon name="person" class="calendar"></ion-icon>
-                                <span>by Dutty</span>
-                            </div>
-                            <div class="third_icon">
-                                <ion-icon name="chatbubbles" class="calendar"></ion-icon>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <button class="read_more1">Read more</button>
-                      </div>
-                    </div>
-                    <div class="product">
-                        <div class="img-wrapper">
-                            <img class="super_car" src="img/Magetique_files/4_1.jpg" alt="" />
-                        </div>
-                        <div class="product-info-wrapper">
-                            <a href="#"><h3>Spares Box Road Test: Liqui-Moly Engine Oil</h3></a>
-                                <div class="product-info">
-                                    <h4 class="product-name" id="text_cut1">Our parts are the standard of real reliability and durability. We use the achievements of progress and provide some new technologies. Our manufacturers and vendors guarantee its high quality.</h4>
-                                </div>
-                        <div class="add">
-                            <div class="first_icon">
-                                <ion-icon name="calendar" class="calendar"></ion-icon>
-                                <span>Jan 08, 2017</span>
-                            </div>
-                            <div class="second_icon">
-                                <ion-icon name="person" class="calendar"></ion-icon>
-                                <span>by Dutty</span>
-                            </div>
-                            <div class="third_icon">
-                                <ion-icon name="chatbubbles" class="calendar"></ion-icon>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <button class="read_more1">Read more</button>
-                      </div>
-                    </div>
-                    <div class="product">
-                        <div class="img-wrapper">
-                            <img class="super_car" src="img/Magetique_files/1_2.jpg" alt="" />
-                        </div>
-                        <div class="product-info-wrapper">
-                            <a href="#"><h3>Parther's Pick: Kincrome Tools</h3></a>
-                                <div class="product-info">
-                                    <h4 class="product-name">Car is a part of culture because we spend a significant amount of time of our lives by the steering wheel.</h4>
-                                </div>
-                            <div class="add">
-                            <div class="first_icon">
-                                <ion-icon name="calendar" class="calendar"></ion-icon>
-                                <span>Jan 17, 2017</span>
-                            </div>
-                            <div class="second_icon">
-                                <ion-icon name="person" class="calendar"></ion-icon>
-                                <span>by Dutty</span>
-                            </div>
-                            <div class="third_icon">
-                                <ion-icon name="chatbubbles" class="calendar"></ion-icon>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <button class="read_more1">Read more</button>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <!-- <div class="container">
-                <div class="product">
-                  <div class="img-wrapper">
-                    <img src="https://ld-magento.template-help.com/magento_62000/pub/media/tm_blog/1/_/1_2.jpg" alt="" />
-                  </div>
-                  <div class="product-info-wrapper">
-                   <a href="#"><h3>Parther's Pick: Kincrome Tools</h3></a>
-                    <div class="product-info">
-                      <h4 class="product-name">Car is a part of culture because we spend a significant amount of time of our lives by the steering wheel.</h4>
-                    </div>
-                    <div class="add">
-                       <div class="first_icon">
-                        <ion-icon name="calendar" class="calendar"></ion-icon>
-                        <span>Jan 17, 2017</span>
-                        </div>
-                        <div class="second_icon">
-                        <ion-icon name="person" class="calendar"></ion-icon>
-                        <span>by Dutty</span>
-                        </div>
-                        <div class="third_icon">
-                        <ion-icon name="chatbubbles" class="calendar"></ion-icon>
-                        <span>0</span>
-                        </div>
-                    </div>
-                    <button class="read_more1">Read more</button>
-                  </div>
-                </div>
-            </div> -->
-        
-    </div>
-    </div>
-    <footer>
-       <div class="parallax-window subscribe_field" data-parallax="scroll" data-image-src="img/lam1.jpg">
+       <div class="main">
            <div class="container">
-               <div class="footer_top">
-                   <div class="one">
-                    <span class="span_search">Get the Latest News Delivered Daily.</span>
-                    <span class="span_detal">Give us your email and you will be daily updated with the latest events, in detail.</span>
-                    </div>
-                    <form action="#" class="input_foot" id="subscribe_form">
-                        <div class="icon_mail"><ion-icon name="mail" class="mall"></ion-icon></div>
-                        <input type="email" class="input_sear" placeholder="Enter your email address" name="subscriber_email" required>
-                        <button type="submit" class="subscribe" id="subscribe_btn">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="under_footer">
+               <h1 class="customer_login">Create New Customer Account</h1>
+               <span class="personal_info">PERSONAL INFORMATION</span>
+               <form action="" class="first_name_registr" id="registr">
+                   <span class="first_name_registr_span">First Name</span>
+                   <input type="text" class="" required name="firstname" id="first">
+                   <span class="first_name_registr_span">Last Name</span>
+                   <input type="text" class="" required name="lastname" id="last">
+               <div class="checkbox_sign_up">
+                    <input type="checkbox">
+                   <span>Sign Up for Newsletter</span>
+               </div>
+               <span class="sign_in_info">SIGN-IN INFORMATION</span>
+                   <span class="first_name_registr_span" id="email">Email</span>
+                   <input type="text" class="" required name="email" id="email">
+              
+                   <span class="first_name_registr_span">Password</span>
+                   <input type="password" required id="pass">
+                   <span class="first_name_registr_span">Confirm Password</span>
+                   <input type="password" class="">
+                    <div class="buttons_registr">
+                   <button class="back_registr">BACK</button>
+                   <button class="create_an_account" id="create">CREATE AN ACCOUNT</button>
+               </div>
+               </form>
+<!--
+               <div class="buttons_registr">
+                   <button class="back_registr">BACK</button>
+                   <button class="create_an_account">CREATE AN ACCOUNT</button>
+               </div>
+-->
+           </div>
+       </div>
+       <footer>
+        <div class="under_footer dop_col">
             <div class="container">
-               <div class="flex_under">
-                    <div class="top_under">
+               <div class="flex_under ">
+                    <div class="top_under ">
                        <div class="img_fooetr">
                         <img src="https://ld-magento.template-help.com/magento_62000/pub/media/theme_options/websites/5/logo_4.png" alt="">
                         </div>
@@ -738,10 +376,10 @@ Our parts are the standard of real reliability and durability. We use the achiev
                     </div>
                     </div> -->
                     <div class="accordeon" id="accordeon">
-                       <div class="accordeon-item" data-accordeon="1">
+                       <div class="accordeon-item " data-accordeon="1">
                            <span class="accordeon-item__title">information<ion-icon name="arrow-dropdown"></ion-icon></span>
                             <img class="accordeon-item__body width_img" src="https://ld-magento.template-help.com/magento_62000/pub/media/theme_options/websites/5/logo_4.png" alt="">
-                            <ul class="call_ul accordeon-item__body" class="accordeon-item__body" >
+                            <ul class="accordeon-item__body call_ul " >
                                <div class="flex_menu_inner">
                                 <li><a href="#" class="border"><i class="ion-social-facebook"></i></a></li>
                                 <li><a href="#" class="border"><i class="ion-social-twitter"></i></a></li>
@@ -771,144 +409,121 @@ Our parts are the standard of real reliability and durability. We use the achiev
                            <a href="#" class="accordeon-item__body color_accor">Newsletter Subscription</a>
                        </div>
                    </div>
-                        <span class="oplki">© 2019 Magento Demo Store. All Rights Reserved.</span>
-                
+                <span class="oplki">© 2019 Magento Demo Store. All Rights Reserved.</span>
             </div>
         </div>
     </footer>
-    <script src="js/authentication.js"></script>
-    <script src="js/cart.js"></script>
-    <script>
-
-        var products = [];
-        getProductsFromBase(getNewProducts).then(function(){
-            
-            var cart_buttons = document.querySelectorAll('button[data-product-value]');
-            cart_buttons.forEach(function(item){
-                item.addEventListener('click', function(e){
-                    var product_value = this.getAttribute('data-product-value');
-                    addToCart(product_value, products);
-                    globalMessage("<ion-icon name=\"checkmark\"></ion-icon><span>Item added to cart!</span>", 'success');
-                });
-            });
-            
-            $('.slider_prod_top').slick({
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              nextArrow:'#first_next_btn.nextSlide',
-              prevArrow:'#first_prev_btn.prevSlide',
-              swipe: false,
-              infinite: true,
-              responsive: [
-                          {
-                                breakpoint: 1201,
-                                settings: {
-                                slidesToShow: 3,
-                                slidesToScroll: 1,
-                              }
-                          },
-                         {
-                            breakpoint: 991,
-                            settings: {
-                              arrows: false,
-                              slidesToShow: 2,
-                              slidesToScroll: 1,
-                            }
-                          },
-                            {
-                                breakpoint: 541,
-                                settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1,
-                              }
-                          },
-                          ]
-            });
-            $('.slider_prod_bottom').slick({
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              swipe: false,
-              infinite: true,
-              nextArrow:'#first_next1_btn.nextSlide',
-              prevArrow:'#first_prev1_btn.prevSlide',
-              initialSlide: 3,
-              responsive: [
-                          {
-                            breakpoint: 1201,
-                            settings: {
-                              arrows: false,
-                              slidesToShow: 3,
-                              slidesToScroll: 1,
-                            }
-                          },
-                         {
-                            breakpoint: 991,
-                            settings: {
-                              arrows: false,
-                              slidesToShow: 2,
-                              slidesToScroll: 1,
-                            }
-                          },
-                            {
-                                breakpoint: 541,
-                                settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1,
-                              }
-                          },
-                        ]
-            });
-            checkCartInformer();
-            document.getElementById('page-preloader').classList.add('done'); 
-            document.querySelector('body').classList.remove('lock');
-        });
-        
-        $(document).ready(function(){
-            $('.slider').slick({
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              swipe: false,
-              infinite: false,
-              nextArrow:'#first_next2_btn.nextSlide',
-              prevArrow:'#first_prev2_btn.prevSlide',
-              responsive: [
-                         {
-                            breakpoint: 991,
-                            settings: {
-                              arrows: false,
-                              slidesToShow: 2,
-                              slidesToScroll: 1,
-                            }
-                          },
-                            {
-                            breakpoint: 767,
-                            settings: {
-                              arrows: false,
-                              slidesToShow: 1,
-                              slidesToScroll: 1,
-                            }
-                          },
-
-                        ]
-            });
-
-            
-
-            
-        });
-    </script>   
-    
-    
-
-    
-    <script src="js/parallax.js"></script>
-    <script src="js/jq.js"></script>
-    <script src="js/exit.js"></script>
-    <script> 
-        $('.parallax-window').parallax({imageSrc: 'img/lam1.jpg'});
+    <script src="../js/exit.js"></script>
+   <script>
+    $('#menu-new').click(function(){
+        $('.menu_top_wrap').toggleClass('open');
+    })
     </script>
-    <script src="js/top_menu.js"></script>
 
+   <script>
+    var isPending = false;
+    $('#fav_icon1').click(function(){
+        if(!isPending){
+            isPending = true;
+            $('#search_close').show();
+            $('#fav_icon1').hide();
+            $("#search1").fadeIn(400, function(){
+                 isPending = false;
+                 
+             });
+        }
+       
+    });
+    $('#search_close').click(function(){
+        if(!isPending){
+            isPending = true;
+             $('#search_close').hide();
+             $('#fav_icon1').show();
+             $("#search1").fadeOut(400, function(){
+                 isPending = false;
+             });
+        }
+    })
+    </script>
+    <script src="../js/top_menu.js"></script>
+    <script>
+    var isPending = false;
+    $('#search_filed_button').click(function(){
+        if(!isPending){
+            isPending = true;
+                $("#search_field").slideToggle(500, function(){
+                    isPending = false;
+            });
+        }
 
+    });
+    </script>
+    <script>
+    var isPending = false;
+    $('.person1').click(function(){
+        if(!isPending){
+            isPending = true;
+                $(".last_menu_header").slideToggle(500, function(){
+                    isPending = false;
+            });
+        }
+
+    });
+    </script>
+    <script>
+    $(".tab_item").not(":first").hide();
+    $(".wrapper .tab").click(function() {
+	$(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+	$(".tab_item").hide().eq($(this).index()).fadeIn()
+}).eq(0).addClass("active");
+      </script>
+    <script>
+      $(document).ready(function(){
+          let accordeon_items = $('.accordeon-item');
+          
+          $('.accordeon-item__title').on('click',function(){
+              var index = $(this).parent().attr('data-accordeon');
+              accordeon_items.each(function(){
+                  if($(this).attr('data-accordeon') != index) {
+                      $(this).children('.accordeon-item__body').slideUp();
+                  }else{
+                      $(this).children('.accordeon-item__body').slideToggle();
+                  }
+                  
+              });
+          })
+      })
+    </script>
+    <script>
+        var isPendings = false;
+        $('[data-spoiler="body"]:not([data-spoiler-state="open"])').hide();
+        $('[data-spoiler="trigger"]').on('click', function(){
+            if(!isPendings){
+                isPendings = true;
+                $(this).parent().children('[data-spoiler="body"]').slideToggle(500, function(){
+                  isPendings = false;  
+                });
+            }
+        })
+    </script>
+    <script>
+            var register_form = document.querySelector('#registr');
+            register_form.addEventListener('submit', function(e){
+                e.preventDefault();
+                var form_children = e.target.children;
+                var result_obj = {};
+                for(var i = 0; i < form_children.length - 1; i++) {
+                    if (form_children[i].type !== 'submit' || form_children[i].type !== 'button') {
+                        result_obj[form_children[i].name] = form_children[i].value
+                    }
+                }
+                registerUser(result_obj);
+                authDetect();
+            });
+        setTimeout(function(){
+        document.getElementById('page-preloader').classList.add('done'); 
+        document.querySelector('body').classList.remove('lock');
+               },250);
+    </script>
 </body>
 </html>

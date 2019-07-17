@@ -1,0 +1,127 @@
+.preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index:3;
+    transition: 1s all;
+    opacity: 1;
+    visibility: visible;
+    z-index: 999999;
+}
+.done{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader{
+        width: 75px;
+        height: 75px;
+        border: 10px solid white;
+        border-radius: 50%;
+        border-top-color: red;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        animation: 1s spin infinite linear;
+       
+    }
+
+@keyframes spin{
+    from{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to{
+        transform: translate(-50%,-50%) rotate(360deg)
+    }
+}
+.under_footer{
+    height: 270px;
+}
+.flex_under{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ul_footer{
+    display: flex;
+    justify-content: flex-end;
+}
+.ul_second{
+    display: flex;
+    justify-content: flex-end;
+}
+.ul_third{
+    display: flex;
+    justify-content: flex-end;
+}
+.last_ul a{
+    color: #dbb879;
+    font-size: 12px;
+}
+.last_ul a:hover{
+    color: black;
+    transition: .2s ease;
+}
+.margin_left{
+    margin-left: 20px;
+}
+.span_end{
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    color: black;
+}
+.call_ul{
+    display:flex; 
+    padding-top: 63px;
+}
+.call_ul a:hover{
+   color: white;
+    background: black;
+    border: 2px solid black;;
+}
+.border{
+    border: 2px solid #eae9e9;
+    border-radius: 50%;
+    color: #888888;
+    padding: 15px;
+    margin-right: 5px;
+    line-height: 1;
+}
+.text_block_desc{
+    overflow: hidden;
+}
+.order_summary{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.item_cart_button{
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.items_in_cart{
+    display: flex;
+    flex-direction: column;
+}
+.card_product{
+    display: flex;
+}
+.card_product img{
+    margin: 0 16px 16px 0;
+}
+.price_card{
+    color: #dbb879;
+    margin-top: 10px;
+}
